@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Jost:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=Montserrat:wght@500;600&amp;display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#F7F5F2;color:#111111;-webkit-font-smoothing:antialiased}
+a{color:#111111;text-decoration:none}
+a:hover{color:#8A6D3F}
+::selection{background:#E6DCCF}
+</style>
+</helmet>
+<div style="font-family:'Jost',sans-serif;font-weight:300;background:#F7F5F2;color:#111111;overflow-x:clip;position:relative">
+
+<header data-nav="" style="position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px clamp(20px,4vw,56px);transition:background .4s ease, backdrop-filter .4s ease, border-color .4s ease;border-bottom:1px solid transparent">
+  <a href="#topo" style="display:flex;flex-direction:column;gap:2px;line-height:1">
+    <span style="font-family:'Jost',sans-serif;font-weight:300;font-size:15px;letter-spacing:.34em;text-transform:uppercase">Raphaela Morais</span>
+    <span style="font-family:'Montserrat',sans-serif;font-weight:500;font-size:9px;letter-spacing:.32em;color:#6B6258">HARMONIZAÇÃO OROFACIAL · CRO 63940</span>
+  </a>
+  <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+    <nav style="display:flex;gap:30px;font-family:'Montserrat',sans-serif;font-weight:500;font-size:10.5px;letter-spacing:.24em;text-transform:uppercase">
+      <a href="#filosofia">Filosofia</a>
+      <a href="#procedimentos">Procedimentos</a>
+      <a href="#consultorio">Consultório</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+  </sc-if>
+  <a href="{{ waHref }}" target="_blank" rel="noopener" style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;padding:13px 20px;border:1px solid #111111;border-radius:999px;white-space:nowrap;transition:background .3s, color .3s" style-hover="background:#111111;color:#F7F5F2">Agendar avaliação</a>
+</header>
+
+<section id="topo" data-screen-label="01 Hero" style="position:relative;min-height:100vh;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));align-items:center;gap:clamp(32px,5vw,80px);padding:clamp(120px,14vh,160px) clamp(20px,5vw,72px) clamp(60px,8vh,96px);box-sizing:border-box">
+  <div data-speed="-0.25" aria-hidden="true" style="position:absolute;left:-2vw;bottom:2vh;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:clamp(120px,22vw,340px);line-height:.8;color:#E6DCCF;pointer-events:none;white-space:nowrap;z-index:0">precisão</div>
+  <div style="position:relative;z-index:1;display:flex;flex-direction:column;gap:28px;max-width:640px">
+    <span data-reveal="0" style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:#8A6D3F">Harmonização Orofacial · Belo Horizonte</span>
+    <sc-if value="{{ headlineA }}" hint-placeholder-val="{{ true }}">
+      <h1 data-reveal="1" style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(52px,7.4vw,112px);line-height:.95;letter-spacing:-.02em;text-wrap:balance">Menos não é falta. <em style="font-weight:500">É precisão.</em></h1>
+    </sc-if>
+    <sc-if value="{{ headlineB }}" hint-placeholder-val="{{ false }}">
+      <h1 data-reveal="1" style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(48px,6.6vw,100px);line-height:.98;letter-spacing:-.02em;text-wrap:balance">Realçar o que já é seu, <em style="font-weight:500">sem perder a sua identidade.</em></h1>
+    </sc-if>
+    <p data-reveal="2" style="margin:0;font-size:clamp(17px,1.35vw,20px);line-height:1.6;color:#3B3530;max-width:480px;text-wrap:pretty">Harmonização facial com planejamento individual e o volume necessário para o <em>seu</em> rosto. O resultado que eu busco é aquele em que ninguém identifica o que foi feito — só percebe que você está <strong style="font-weight:500">mais bonita</strong>.</p>
+    <div data-reveal="3" style="display:flex;flex-wrap:wrap;align-items:center;gap:22px">
+      <a href="{{ waHref }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:14px;padding:19px 30px;background:#111111;color:#F7F5F2;border-radius:999px;font-family:'Montserrat',sans-serif;font-weight:600;font-size:11px;letter-spacing:.22em;text-transform:uppercase;transition:background .3s, transform .3s" style-hover="background:#8A6D3F;color:#F7F5F2">Agendar avaliação <span style="font-family:'Jost',sans-serif;font-size:16px;letter-spacing:0">→</span></a>
+      <a href="#filosofia" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;border-bottom:1px solid #C19A6B;padding-bottom:2px">conheça a minha filosofia</a>
+    </div>
+    <span data-reveal="4" style="font-family:'Montserrat',sans-serif;font-weight:500;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#6B6258">Dra. Raphaela Morais · Cirurgiã-dentista · CRO 63940 · Especialista em HOF pela CPCD</span>
+  </div>
+  <div style="position:relative;z-index:1;justify-self:center;width:min(100%,520px)">
+    <div data-reveal="2" style="position:relative;aspect-ratio:4/5;border-radius:260px 260px 4px 4px;overflow:hidden;background:#E6DCCF">
+      <div data-speed="0.12" style="position:absolute;left:0;right:0;top:-10%;height:120%">
+        <image-slot id="hero-retrato" shape="rect" placeholder="Retrato profissional da Dra. Raphaela — fundo claro, luz natural"></image-slot>
+      </div>
+    </div>
+    <div data-speed="-0.18" style="position:absolute;left:-28px;bottom:9%;background:#F7F5F2;padding:18px 22px;border-radius:2px;box-shadow:0 24px 60px -30px rgba(17,17,17,.35);display:flex;flex-direction:column;gap:6px;max-width:220px">
+      <span style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:9.5px;letter-spacing:.28em;color:#8A6D3F">CONSULTÓRIO NOVO</span>
+      <span style="font-family:'Cormorant Garamond',serif;font-size:21px;line-height:1.15">Inaugurado em abril de 2026, em Belo Horizonte.</span>
+    </div>
+    <div aria-hidden="true" data-speed="0.3" style="position:absolute;right:-18px;top:14%;width:92px;height:92px;border:1px solid #B8975A;border-radius:50%"></div>
+  </div>
+</section>
+
+<section id="filosofia" data-words="" data-screen-label="02 Filosofia" style="position:relative;height:240vh;background:#F7F5F2">
+  <div style="position:sticky;top:0;height:100vh;display:flex;flex-direction:column;justify-content:center;gap:40px;padding:0 clamp(20px,7vw,120px);box-sizing:border-box">
+    <span style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:#8A6D3F">A minha filosofia</span>
+    <p style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(34px,4.6vw,76px);line-height:1.1;letter-spacing:-.01em;max-width:1200px;display:flex;flex-wrap:wrap;column-gap:.26em">
+      <sc-for list="{{ words }}" as="w" hint-placeholder-count="18"><span data-word="" style="color:#D2C8BB;transition:color .35s ease">{{ w }}</span></sc-for>
+    </p>
+    <div style="display:flex;align-items:center;gap:16px">
+      <span style="width:48px;height:1px;background:#B8975A"></span>
+      <span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;color:#3B3530">Dra. Raphaela Morais</span>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="03 Princípios" style="position:relative;padding:8vh clamp(20px,5vw,72px) 12vh;background:#F7F5F2">
+  <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;max-width:1180px;margin:0 auto 6vh">
+    <h2 data-reveal="0" style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(40px,5vw,72px);line-height:1;letter-spacing:-.015em;max-width:640px">Quatro princípios que guiam <em>cada</em> planejamento.</h2>
+    <p data-reveal="1" style="margin:0;max-width:340px;font-size:17px;line-height:1.6;color:#3B3530">Antes de qualquer procedimento, existe uma conversa e uma análise do seu rosto. É aqui que tudo começa.</p>
+  </div>
+  <div data-vstack="" style="max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:6vh">
+    <article data-vcard="" style="position:sticky;top:calc(14vh + 0px);min-height:min(62vh,560px);background:#FFFDFB;border:1px solid #E6DCCF;border-radius:6px;padding:clamp(28px,4vw,64px);box-sizing:border-box;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,4vw,64px);align-content:space-between;transform-origin:50% 0;box-shadow:0 30px 80px -50px rgba(17,17,17,.4)">
+      <span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(80px,10vw,160px);line-height:.8;color:#C19A6B">01</span>
+      <div style="display:flex;flex-direction:column;gap:20px;align-self:end">
+        <h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(34px,3.6vw,56px);line-height:1.02">Menos não é falta, <strong style="font-weight:600">é precisão.</strong></h3>
+        <p style="margin:0;font-size:17px;line-height:1.65;color:#3B3530;max-width:440px">Planejo com o volume necessário para o seu rosto — nem mais, nem menos. Menos excessos, mais estratégia.</p>
+      </div>
+    </article>
+    <article data-vcard="" style="position:sticky;top:calc(14vh + 22px);min-height:min(62vh,560px);background:#E6DCCF;border-radius:6px;padding:clamp(28px,4vw,64px);box-sizing:border-box;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,4vw,64px);align-content:space-between;transform-origin:50% 0;box-shadow:0 30px 80px -50px rgba(17,17,17,.4)">
+      <span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(80px,10vw,160px);line-height:.8;color:#8A6D3F">02</span>
+      <div style="display:flex;flex-direction:column;gap:20px;align-self:end">
+        <h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(34px,3.6vw,56px);line-height:1.02">Realçar, <strong style="font-weight:600">não transformar.</strong></h3>
+        <p style="margin:0;font-size:17px;line-height:1.65;color:#2A2520;max-width:440px">O objetivo não é mudar o rosto, e sim valorizar o que já existe — com equilíbrio, proporção e respeito à sua anatomia.</p>
+      </div>
+    </article>
+    <article data-vcard="" style="position:sticky;top:calc(14vh + 44px);min-height:min(62vh,560px);background:#111111;color:#F7F5F2;border-radius:6px;padding:clamp(28px,4vw,64px);box-sizing:border-box;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,4vw,64px);align-content:space-between;transform-origin:50% 0;box-shadow:0 30px 80px -50px rgba(17,17,17,.6)">
+      <span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(80px,10vw,160px);line-height:.8;color:#C19A6B">03</span>
+      <div style="display:flex;flex-direction:column;gap:20px;align-self:end">
+        <h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(34px,3.6vw,56px);line-height:1.02">Sem perder a <strong style="font-weight:600">sua identidade.</strong></h3>
+        <p style="margin:0;font-size:17px;line-height:1.65;color:#E6DCCF;max-width:440px">A pergunta não deveria ser “o que ela fez?”, e sim: “como ela está mais bonita?”. Você continua sendo você.</p>
+      </div>
+    </article>
+    <article data-vcard="" style="position:sticky;top:calc(14vh + 66px);min-height:min(62vh,560px);background:#C19A6B;border-radius:6px;padding:clamp(28px,4vw,64px);box-sizing:border-box;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,4vw,64px);align-content:space-between;transform-origin:50% 0;box-shadow:0 30px 80px -50px rgba(17,17,17,.4)">
+      <span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(80px,10vw,160px);line-height:.8;color:#111111">04</span>
+      <div style="display:flex;flex-direction:column;gap:20px;align-self:end">
+        <h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(34px,3.6vw,56px);line-height:1.02">Primeiro, <strong style="font-weight:600">no meu próprio rosto.</strong></h3>
+        <p style="margin:0;font-size:17px;line-height:1.65;color:#111111;max-width:440px">Cada procedimento que realizo em mim segue o mesmo princípio que aplico nas minhas pacientes.</p>
+        <sc-if value="{{ showPending }}" hint-placeholder-val="{{ true }}"><span style="align-self:flex-start;font-family:'Montserrat',sans-serif;font-weight:600;font-size:9.5px;letter-spacing:.18em;padding:6px 10px;border:1px dashed #111111;border-radius:3px">[VALIDAR COM A CLIENTE]</span></sc-if>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="procedimentos" data-hstack="" data-screen-label="04 Procedimentos" style="position:relative;height:640vh;background:#EFE8DE">
+  <div style="position:sticky;top:0;height:100vh;overflow:hidden;display:flex;flex-direction:column;box-sizing:border-box;padding:clamp(96px,13vh,120px) 0 clamp(24px,4vh,40px)">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 32px;padding:0 clamp(20px,5vw,72px);margin-bottom:clamp(20px,3.5vh,36px)">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <span style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:#8A6D3F">Procedimentos</span>
+        <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(34px,4.2vw,62px);line-height:1;letter-spacing:-.015em">Cada rosto pede <em>um</em> planejamento.</h2>
+      </div>
+      <div style="display:flex;align-items:center;gap:18px;min-width:200px">
+        <span data-hcount="" style="font-family:'Cormorant Garamond',serif;font-size:28px;font-variant-numeric:tabular-nums">01</span>
+        <span style="position:relative;flex:1;height:1px;background:#D2C8BB;min-width:120px"><span data-hbar="" style="position:absolute;left:0;top:0;bottom:0;width:0;background:#111111"></span></span>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:28px;color:#6B6258">07</span>
+      </div>
+    </div>
+    <div style="position:relative;flex:1;min-height:0">
+      <sc-for list="{{ procs }}" as="p" hint-placeholder-count="1">
+        <article data-hcard="" style="position:absolute;top:0;bottom:0;left:0;width:min(1080px,90vw);background:{{ p.bg }};color:{{ p.fg }};border-radius:6px;overflow:hidden;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));transform-origin:0 50%;box-shadow:-30px 0 80px -40px rgba(17,17,17,.35);will-change:transform">
+          <div style="display:flex;flex-direction:column;justify-content:space-between;gap:20px;padding:clamp(24px,3.6vw,56px);min-height:0">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px">
+              <span style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;opacity:.8">{{ p.tag }}</span>
+              <span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(40px,4vw,64px);line-height:.8;color:{{ p.num }}">{{ p.n }}</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:16px">
+              <h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(34px,3.8vw,58px);line-height:1;letter-spacing:-.01em">{{ p.title }}</h3>
+              <p style="margin:0;font-size:clamp(15px,1.15vw,17px);line-height:1.6;max-width:440px;text-wrap:pretty">{{ p.text }}</p>
+              <p style="margin:0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(19px,1.5vw,23px);line-height:1.3;color:{{ p.num }}">{{ p.note }}</p>
+            </div>
+          </div>
+          <div style="position:relative;min-height:180px;background:{{ p.img }}">
+            <image-slot id="proc-{{ $index }}" shape="rect" placeholder="{{ p.ph }}"></image-slot>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section aria-hidden="true" data-screen-label="05 Palavras" style="position:relative;padding:9vh 0;background:#F7F5F2;overflow:hidden;border-bottom:1px solid #E6DCCF">
+  <div data-marquee="" style="display:flex;gap:.5em;white-space:nowrap;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(56px,8vw,128px);line-height:1;will-change:transform">
+    <span>naturalidade</span><span style="color:#B8975A">·</span><em>harmonia</em><span style="color:#B8975A">·</span><span>equilíbrio</span><span style="color:#B8975A">·</span><em>planejamento</em><span style="color:#B8975A">·</span><span>proporção</span><span style="color:#B8975A">·</span><em>sutileza</em><span style="color:#B8975A">·</span><span>identidade</span><span style="color:#B8975A">·</span><em>detalhes</em>
+  </div>
+</section>
+
+<section id="consultorio" data-screen-label="06 Consultório" style="position:relative;padding:clamp(96px,14vh,160px) clamp(20px,5vw,72px);background:#F7F5F2">
+  <div style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(48px,6vw,96px);align-items:center">
+    <div style="display:flex;flex-direction:column;gap:26px;max-width:480px">
+      <span data-reveal="0" style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:#8A6D3F">O consultório</span>
+      <h2 data-reveal="1" style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(44px,5.4vw,84px);line-height:.98;letter-spacing:-.02em">Um sonho que <em>ganhou forma.</em></h2>
+      <p data-reveal="2" style="margin:0;font-size:18px;line-height:1.65;color:#3B3530;text-wrap:pretty">Em abril de 2026 inaugurei o meu consultório em Belo Horizonte: um espaço claro, com janelões e vista da cidade, marcenaria em madeira clara e poltronas bouclé. Pensei cada detalhe para que você se sinta acolhida, sem pressa, do primeiro café ao planejamento.</p>
+      <div data-reveal="3" style="display:flex;flex-direction:column;gap:10px;padding-top:22px;border-top:1px solid #E6DCCF">
+        <span style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:10px;letter-spacing:.28em;color:#6B6258">ENDEREÇO</span>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:24px;line-height:1.2">Belo Horizonte · MG</span>
+        <sc-if value="{{ showPending }}" hint-placeholder-val="{{ true }}"><span style="align-self:flex-start;font-family:'Montserrat',sans-serif;font-weight:600;font-size:9.5px;letter-spacing:.18em;padding:6px 10px;border:1px dashed #8A6D3F;color:#8A6D3F;border-radius:3px">[PENDENTE] endereço exato · espaço compartilhado?</span></sc-if>
+      </div>
+    </div>
+    <div style="position:relative;height:clamp(520px,78vh,760px)">
+      <div style="position:absolute;right:0;top:0;width:68%;height:70%;border-radius:4px;overflow:hidden;background:#E6DCCF">
+        <div data-speed="0.1" style="position:absolute;left:0;right:0;top:-12%;height:124%"><image-slot id="consultorio-1" shape="rect" placeholder="Consultório — janelões com vista da cidade"></image-slot></div>
+      </div>
+      <div data-speed="-0.14" style="position:absolute;left:0;bottom:4%;width:48%;height:50%;border-radius:200px 200px 4px 4px;overflow:hidden;background:#E6DCCF;box-shadow:0 30px 70px -40px rgba(17,17,17,.45);border:8px solid #F7F5F2">
+        <image-slot id="consultorio-2" shape="rect" placeholder="Poltronas bouclé + espelho dourado"></image-slot>
+      </div>
+      <div data-speed="-0.3" style="position:absolute;right:6%;bottom:0;width:30%;height:28%;border-radius:4px;overflow:hidden;background:#E6DCCF;border:8px solid #F7F5F2">
+        <image-slot id="consultorio-3" shape="rect" placeholder="Detalhe da marcenaria freijó"></image-slot>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sobre" data-screen-label="07 Sobre" style="position:relative;padding:clamp(96px,14vh,160px) clamp(20px,5vw,72px);background:#E6DCCF;overflow:hidden">
+  <div data-speed="-0.2" aria-hidden="true" style="position:absolute;right:-4vw;top:6vh;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(120px,18vw,280px);line-height:.8;color:#DCCFBE;white-space:nowrap;pointer-events:none">Raphaela</div>
+  <div style="position:relative;max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(48px,6vw,96px);align-items:center">
+    <div style="position:relative;aspect-ratio:3/4;max-width:480px;width:100%;justify-self:center;border-radius:4px;overflow:hidden;background:#DCCFBE">
+      <div data-speed="0.1" style="position:absolute;left:0;right:0;top:-12%;height:124%"><image-slot id="sobre-retrato" shape="rect" placeholder="Retrato com o espelho redondo dourado"></image-slot></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:26px;max-width:560px">
+      <span data-reveal="0" style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:#6E5530">Sobre mim</span>
+      <h2 data-reveal="1" style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(44px,5vw,76px);line-height:.98;letter-spacing:-.02em">Oi, eu sou a <em>Raphaela.</em></h2>
+      <p data-reveal="2" style="margin:0;font-size:18px;line-height:1.7;color:#2A2520;text-wrap:pretty">Sou cirurgiã-dentista e especialista em Harmonização Orofacial pela CPCD. Acredito que beleza não é sobre mudar o rosto — é sobre <em>cuidar, prevenir e valorizar</em> o que já é seu.</p>
+      <p data-reveal="3" style="margin:0;font-size:18px;line-height:1.7;color:#2A2520;text-wrap:pretty">Por isso sou transparente em cada etapa: explico o que cada ponto de aplicação faz, quanto produto faz sentido para você e por quê. Sem excessos, com estratégia.</p>
+      <div data-reveal="4" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:18px;padding-top:24px;border-top:1px solid #C9B9A4">
+        <div style="display:flex;flex-direction:column;gap:6px"><span style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:9.5px;letter-spacing:.26em;color:#6E5530">FORMAÇÃO</span><span style="font-family:'Cormorant Garamond',serif;font-size:21px;line-height:1.2">Cirurgiã-dentista</span></div>
+        <div style="display:flex;flex-direction:column;gap:6px"><span style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:9.5px;letter-spacing:.26em;color:#6E5530">ESPECIALIZAÇÃO</span><span style="font-family:'Cormorant Garamond',serif;font-size:21px;line-height:1.2">HOF · CPCD</span></div>
+        <div style="display:flex;flex-direction:column;gap:6px"><span style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:9.5px;letter-spacing:.26em;color:#6E5530">REGISTRO</span><span style="font-family:'Cormorant Garamond',serif;font-size:21px;line-height:1.2">CRO 63940</span></div>
+      </div>
+      <sc-if value="{{ showPending }}" hint-placeholder-val="{{ true }}"><span style="align-self:flex-start;font-family:'Montserrat',sans-serif;font-weight:600;font-size:9.5px;letter-spacing:.18em;padding:6px 10px;border:1px dashed #6E5530;color:#6E5530;border-radius:3px">[PENDENTE] ano de formatura / início em HOF · confirmar CRO-MG</span></sc-if>
+    </div>
+  </div>
+</section>
+
+<section id="duvidas" data-screen-label="08 Dúvidas" style="position:relative;padding:clamp(96px,14vh,160px) clamp(20px,5vw,72px);background:#F7F5F2">
+  <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(40px,6vw,96px);align-items:start">
+    <div style="display:flex;flex-direction:column;gap:22px;position:sticky;top:120px">
+      <span data-reveal="0" style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:#8A6D3F">Dúvidas frequentes</span>
+      <h2 data-reveal="1" style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(40px,4.6vw,68px);line-height:1;letter-spacing:-.015em">As perguntas que <em>mais</em> recebo.</h2>
+      <p data-reveal="2" style="margin:0;font-size:17px;line-height:1.6;color:#3B3530">Ficou alguma outra? Me chama que eu te explico.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;border-top:1px solid #D2C8BB">
+      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="5">
+        <div style="border-bottom:1px solid #D2C8BB">
+          <button onClick="{{ f.toggle }}" style="all:unset;box-sizing:border-box;width:100%;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:26px 0;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(22px,2vw,28px);line-height:1.2" style-hover="color:#8A6D3F">
+            <span>{{ f.q }}</span>
+            <span style="flex:none;width:36px;height:36px;border:1px solid #C19A6B;border-radius:50%;display:grid;place-items:center;font-family:'Jost',sans-serif;font-weight:300;font-size:20px;transition:transform .4s ease;transform:{{ f.rot }}">+</span>
+          </button>
+          <div style="display:grid;grid-template-rows:{{ f.rows }};transition:grid-template-rows .5s cubic-bezier(.2,.7,.2,1)">
+            <div style="overflow:hidden">
+              <p style="margin:0;padding:0 56px 28px 0;font-size:17px;line-height:1.7;color:#3B3530;text-wrap:pretty">{{ f.a }}</p>
+            </div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="09 CTA final" style="position:relative;padding:clamp(110px,18vh,200px) clamp(20px,5vw,72px);background:#111111;color:#F7F5F2;overflow:hidden;text-align:center">
+  <div data-speed="-0.15" aria-hidden="true" style="position:absolute;left:50%;top:50%;width:min(80vw,760px);aspect-ratio:1;margin:calc(min(80vw,760px) / -2) 0 0 calc(min(80vw,760px) / -2);border:1px solid #3A332C;border-radius:50%;pointer-events:none"></div>
+  <div data-speed="0.1" aria-hidden="true" style="position:absolute;left:50%;top:50%;width:min(56vw,520px);aspect-ratio:1;margin:calc(min(56vw,520px) / -2) 0 0 calc(min(56vw,520px) / -2);border:1px solid #5A4A32;border-radius:50%;pointer-events:none"></div>
+  <div style="position:relative;max-width:880px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:30px">
+    <span data-reveal="0" style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:#C19A6B">Avaliação facial personalizada</span>
+    <h2 data-reveal="1" style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(48px,7vw,108px);line-height:.96;letter-spacing:-.02em;text-wrap:balance">Vamos conversar sobre <em>o seu</em> rosto?</h2>
+    <p data-reveal="2" style="margin:0;max-width:540px;font-size:18px;line-height:1.65;color:#D8CFC4">A avaliação é o primeiro passo: entendo o que você deseja, analiso a sua face e monto um planejamento só seu. Me chama que eu te explico 🤍</p>
+    <a data-reveal="3" href="{{ waHref }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:14px;padding:21px 34px;background:#F7F5F2;color:#111111;border-radius:999px;font-family:'Montserrat',sans-serif;font-weight:600;font-size:11px;letter-spacing:.22em;text-transform:uppercase;transition:background .3s" style-hover="background:#C19A6B;color:#111111">Chamar no WhatsApp <span style="font-family:'Jost',sans-serif;font-size:16px;letter-spacing:0">→</span></a>
+    <span data-reveal="4" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:#B3A89B">Investimento sob consulta, definido após a avaliação.</span>
+  </div>
+</section>
+
+<footer data-screen-label="10 Rodapé" style="padding:56px clamp(20px,5vw,72px) 40px;background:#111111;color:#B3A89B;border-top:1px solid #2A2520">
+  <div style="max-width:1240px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:32px 48px">
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <span style="font-family:'Jost',sans-serif;font-weight:300;font-size:18px;letter-spacing:.34em;color:#F7F5F2">RAPHAELA MORAIS</span>
+      <span style="font-family:'Montserrat',sans-serif;font-weight:500;font-size:10px;letter-spacing:.24em">HARMONIZAÇÃO OROFACIAL</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:1.5">
+      <span>Responsável técnica: Dra. Raphaela Souza Morais</span>
+      <span>Cirurgiã-dentista · CRO 63940 · Especialista em HOF (CPCD)</span>
+      <span>Belo Horizonte · MG <sc-if value="{{ showPending }}" hint-placeholder-val="{{ true }}"><span style="color:#C19A6B">[PENDENTE: endereço]</span></sc-if></span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px;font-size:14px">
+      <a href="https://instagram.com/raphaelasmorais" target="_blank" rel="noopener" style="color:#F7F5F2">Instagram · @raphaelasmorais</a>
+      <a href="{{ waHref }}" target="_blank" rel="noopener" style="color:#F7F5F2">WhatsApp · agendar avaliação</a>
+    </div>
+  </div>
+  <div style="max-width:1240px;margin:40px auto 0;padding-top:22px;border-top:1px solid #2A2520;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-family:'Montserrat',sans-serif;font-weight:500;font-size:9.5px;letter-spacing:.22em;color:#8C8276">
+    <span>© 2026 DRA. RAPHAELA MORAIS</span>
+    <span>POSICIONAMENTO PROFISSIONAL · GR ONE</span>
+  </div>
+</footer>
+
+<a data-float="" href="{{ waHref }}" target="_blank" rel="noopener" style="position:fixed;right:clamp(16px,3vw,32px);bottom:clamp(16px,3vw,32px);z-index:60;display:flex;align-items:center;gap:12px;padding:15px 22px 15px 16px;background:#111111;color:#F7F5F2;border-radius:999px;box-shadow:0 18px 40px -18px rgba(17,17,17,.6);font-family:'Montserrat',sans-serif;font-weight:600;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;opacity:0;pointer-events:none;transform:translateY(16px);transition:opacity .4s ease, transform .4s ease, background .3s" style-hover="background:#8A6D3F;color:#F7F5F2">
+  <span style="width:8px;height:8px;border-radius:50%;background:#C9737A"></span>Agendar avaliação
+</a>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;headline&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;A · Menos é precisão&quot;,&quot;B · Realçar o que é seu&quot;],&quot;default&quot;:&quot;A · Menos é precisão&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Conteúdo&quot;},&quot;showPending&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Conteúdo&quot;},&quot;whatsapp&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contato&quot;},&quot;parallax&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;min&quot;:0,&quot;max&quot;:2,&quot;step&quot;:0.1,&quot;default&quot;:1,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Movimento&quot;}}">
+class Component extends DCLogic {
+  state = { open: 0, wide: typeof window === 'undefined' ? true : window.innerWidth > 900 };
+
+  componentDidMount() {
+    this.onScroll = () => { if (!this.raf) this.raf = requestAnimationFrame(() => { this.raf = null; this.update(); }); };
+    this.onResize = () => { const wide = window.innerWidth > 900; if (wide !== this.state.wide) this.setState({ wide }); this.onScroll(); };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    window.addEventListener('resize', this.onResize);
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    els.forEach(el => {
+      const d = parseInt(el.dataset.reveal || '0', 10);
+      el.style.opacity = '0';
+      el.style.transform = 'translate3d(0,28px,0)';
+      el.style.transition = `opacity 1.1s cubic-bezier(.2,.7,.2,1) ${d * 0.11}s, transform 1.1s cubic-bezier(.2,.7,.2,1) ${d * 0.11}s`;
+    });
+    this.io = new IntersectionObserver(entries => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'none'; this.io.unobserve(e.target); }
+    }), { threshold: 0.15, rootMargin: '0px 0px -5% 0px' });
+    requestAnimationFrame(() => els.forEach(el => this.io.observe(el)));
+    this.update();
+    setTimeout(() => this.update(), 400);
+  }
+  componentDidUpdate() { this.onScroll && this.onScroll(); }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScroll);
+    window.removeEventListener('resize', this.onResize);
+    this.io && this.io.disconnect();
+  }
+
+  update() {
+    const vh = window.innerHeight, vw = window.innerWidth;
+    const k = this.props.parallax ?? 1;
+    const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+    const ease = t => 1 - Math.pow(1 - t, 3);
+
+    const nav = document.querySelector('[data-nav]');
+    if (nav) {
+      const s = window.scrollY > 40;
+      nav.style.background = s ? 'rgba(247,245,242,.82)' : 'transparent';
+      nav.style.backdropFilter = s ? 'blur(14px)' : 'none';
+      nav.style.borderBottomColor = s ? '#E6DCCF' : 'transparent';
+    }
+    const fl = document.querySelector('[data-float]');
+    if (fl) {
+      const on = window.scrollY > vh * 0.9 && (document.body.scrollHeight - window.scrollY - vh) > vh * 0.9;
+      fl.style.opacity = on ? '1' : '0';
+      fl.style.pointerEvents = on ? 'auto' : 'none';
+      fl.style.transform = on ? 'none' : 'translateY(16px)';
+    }
+
+    document.querySelectorAll('[data-speed]').forEach(el => {
+      const r = el.parentElement.getBoundingClientRect();
+      if (r.bottom < -vh || r.top > vh * 2) return;
+      const c = r.top + r.height / 2 - vh / 2;
+      el.style.transform = `translate3d(0,${(c * -parseFloat(el.dataset.speed) * k).toFixed(1)}px,0)`;
+    });
+
+    const ws = document.querySelector('[data-words]');
+    if (ws) {
+      const r = ws.getBoundingClientRect();
+      const p = clamp(-r.top / (r.height - vh), 0, 1);
+      const words = ws.querySelectorAll('[data-word]');
+      const n = words.length;
+      words.forEach((w, i) => { w.style.color = (i + 0.5) / n < p * 1.15 ? '#111111' : '#D2C8BB'; });
+    }
+
+    const vcards = Array.from(document.querySelectorAll('[data-vcard]'));
+    vcards.forEach((c, i) => {
+      const next = vcards[i + 1];
+      if (!next) { c.style.transform = 'none'; return; }
+      const d = next.getBoundingClientRect().top - c.getBoundingClientRect().top;
+      const p = clamp(1 - d / (vh * 0.6), 0, 1);
+      c.style.transform = `scale(${(1 - p * 0.05).toFixed(4)})`;
+      c.style.filter = `brightness(${(1 - p * 0.12).toFixed(3)})`;
+    });
+
+    const hs = document.querySelector('[data-hstack]');
+    if (hs) {
+      const r = hs.getBoundingClientRect();
+      const p = clamp(-r.top / (r.height - vh), 0, 1);
+      const cards = hs.querySelectorAll('[data-hcard]');
+      const n = cards.length;
+      if (n) {
+        const seg = p * (n - 1) * 1.08;
+        const w = cards[0].offsetWidth;
+        const base = (vw - w) / 2;
+        cards.forEach((c, i) => {
+          const enter = i === 0 ? 1 : ease(clamp(seg - (i - 1), 0, 1));
+          const depth = clamp(seg - i, 0, 3);
+          const x = base + (1 - enter) * (vw - base + 60) - depth * (vw < 700 ? 10 : 30);
+          c.style.transform = `translate3d(${x.toFixed(1)}px,0,0) scale(${(1 - depth * 0.04).toFixed(4)})`;
+          c.style.zIndex = String(i + 1);
+        });
+        const idx = clamp(Math.round(seg), 0, n - 1);
+        const cnt = hs.querySelector('[data-hcount]');
+        if (cnt) cnt.textContent = String(idx + 1).padStart(2, '0');
+        const bar = hs.querySelector('[data-hbar]');
+        if (bar) bar.style.width = (clamp(seg / (n - 1), 0, 1) * 100).toFixed(1) + '%';
+      }
+    }
+
+    const mq = document.querySelector('[data-marquee]');
+    if (mq) {
+      const r = mq.parentElement.getBoundingClientRect();
+      const t = (vh - r.top) / (vh + r.height);
+      const span = Math.max(0, mq.scrollWidth - vw);
+      mq.style.transform = `translate3d(${(-clamp(t, 0, 1) * span * Math.min(1, k || 0.001) - 0).toFixed(1)}px,0,0)`;
+    }
+  }
+
+  renderVals() {
+    const num = (this.props.whatsapp ?? '').replace(/\D/g, '');
+    const msg = 'Olá, Dra. Raphaela! Quero agendar uma avaliação 🤍';
+    const waHref = num ? `https://wa.me/${num}?text=${encodeURIComponent(msg)}` : 'https://wa.me/message/6BKKQTJL43HHK1';
+    const phrase = 'Quando o resultado parece leve, discreto e ninguém identifica exatamente o que foi feito… é porque deu certo.';
+    const L = { bg: '#FFFDFB', fg: '#111111', num: '#8A6D3F', img: '#E6DCCF' };
+    const S = { bg: '#E6DCCF', fg: '#111111', num: '#6E5530', img: '#DCCFBE' };
+    const D = { bg: '#111111', fg: '#F7F5F2', num: '#C19A6B', img: '#2A2520' };
+    const procs = [
+      { ...L, n: '01', tag: 'O mais procurado', title: 'Preenchimento labial', text: 'Contorno, correção de assimetria e hidratação, respeitando o formato natural da sua boca. Nos casos que compartilho, costumo trabalhar entre 0,5 ml e 1 ml.', note: 'O volume é consequência do planejamento — nunca o ponto de partida.', ph: 'Close de lábios [VALIDAR autorização da paciente]' },
+      { ...S, n: '02', tag: 'Preventivo · terço superior', title: 'Toxina botulínica', text: 'Suaviza as linhas de expressão preservando os seus movimentos. Também em pontos estratégicos: cauda da sobrancelha, bunny lines, asa do nariz, depressor do lábio, Nefertiti e platisma.', note: 'Afinal, quando é a hora certa de começar?', ph: 'Testa em repouso / contração [VALIDAR]' },
+      { ...D, n: '03', tag: 'Proporção', title: 'Perfiloplastia', text: 'Um olhar para o perfil como um todo: equilíbrio entre nariz, lábios e queixo, para que cada parte converse com a outra.', note: 'Harmonia é relação, não um detalhe isolado.', ph: 'Perfil — caso real [VALIDAR]' },
+      { ...L, n: '04', tag: 'Sutileza', title: 'Rinomodelação', text: 'Pequenos ajustes no contorno do nariz, sem cirurgia, para realçar o que já existe na sua face.', note: 'Realçar, não transformar.', ph: 'Rinomodelação [VALIDAR]' },
+      { ...S, n: '05', tag: 'Firmeza', title: 'Bioestimulador de colágeno', text: 'Estimula a produção do seu próprio colágeno para mais firmeza e sustentação, com melhora progressiva ao longo do tempo.', note: 'Cuidar hoje é prevenir amanhã.', ph: 'Textura de pele / luz natural' },
+      { ...D, n: '06', tag: 'Regenerativa', title: 'Qualidade de pele', text: 'Protocolos de estética regenerativa para uma pele mais saudável e iluminada — a base de qualquer harmonização.', note: 'Beleza também é saúde.', ph: 'Detalhe de pele / consultório' },
+      { ...L, n: '07', tag: 'Estruturação', title: 'Full face', text: 'Um planejamento global do rosto, com produto bem distribuído para contorno e sustentação — sempre com a sua identidade como referência.', note: 'Menos excessos, mais estratégia.', ph: 'Full face — caso real [VALIDAR]' }
+    ];
+    const faqData = [
+      { q: 'Afinal, quando é a hora certa de começar o botox?', a: 'Essa é uma das perguntas que mais recebo. Não existe uma idade certa: o que define é a sua pele, a forma como você se expressa e o que você deseja prevenir. Por isso tudo começa com uma avaliação.' },
+      { q: 'Tenho medo de ficar artificial. Como você evita o exagero?', a: 'Esse é o centro do meu trabalho. Planejo com o volume necessário para o seu rosto e respeito a sua anatomia. Quando ninguém identifica exatamente o que foi feito, é porque deu certo.' },
+      { q: 'Como funciona a avaliação facial?', a: 'É uma conversa sem pressa. Entendo o que te incomoda e o que você deseja, analiso a sua face e explico, com transparência, o que faz sentido para você — e o que não faz.' },
+      { q: 'Quanto custa?', a: 'O investimento é sob consulta, porque depende do seu planejamento. Na avaliação eu te explico cada etapa e o valor antes de qualquer procedimento.' },
+      { q: 'Onde fica o consultório?', a: 'Em Belo Horizonte (MG), em um espaço novo, inaugurado em abril de 2026. Me chama no WhatsApp que eu te envio a localização.' }
+    ];
+    const faqs = faqData.map((f, i) => {
+      const open = this.state.open === i;
+      return { ...f, rows: open ? '1fr' : '0fr', rot: open ? 'rotate(45deg)' : 'none', toggle: () => this.setState({ open: open ? -1 : i }) };
+    });
+    const variant = this.props.headline ?? 'A · Menos é precisão';
+    const headlineA = !variant.startsWith('B');
+    return {
+      waHref, procs, faqs, words: phrase.split(' '),
+      wide: this.state.wide,
+      headlineA, headlineB: !headlineA,
+      showPending: this.props.showPending ?? true
+    };
+  }
+}
+</script>
+</body>
+</html>
